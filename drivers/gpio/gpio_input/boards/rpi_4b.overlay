@@ -1,0 +1,17 @@
+/ {
+	aliases {
+		sw0 = &ext_btn;
+	};
+
+	gpio_keys {
+		compatible = "gpio-keys";
+		ext_btn: external-button {
+			label = "EXT_BTN";
+			gpios = <&gpio0 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+		};
+	};
+};
+
+&gpio0 {
+	status = "okay";
+};
